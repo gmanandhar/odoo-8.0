@@ -4,7 +4,7 @@ Before installing odoo there are two python packages which does not install in d
 - python-pypdf
 - python-imaging_1.13
 #### Steps of creating fake package
-*```bash
+```bash
 apt-get install equivs  
 run equivs-control python-pypdf # will create and populate the file python-pypdf in current directory
 ```
@@ -21,8 +21,8 @@ Description: fake package to provide python-pypdf
  .
  python-pypdf2  does not provide python-pypdf
  ```
-
-*```bash
+* Run following bash command
+```bash
 run equivs-build python-pypdf # will create the fake package python-pypdf_1.13_all.deb
 dpkg -i python-pypdf_1.13_all.deb # install the package 
 pip install pyPdf 
