@@ -3,7 +3,7 @@ Custom Odoo 8.0 with debain 10 using docker
 Before installing odoo there are two python packages which does not install in debain 10. we need to make dummy package for them. 
  python-pypdf
  python-imaging_1.13
-# Steps of creating fake package
+#### Steps of creating fake package
 > apt-get install equivs  
 > run equivs-control python-pypdf # will create and populate the file python-pypdf in current directory
 
