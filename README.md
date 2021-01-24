@@ -1,5 +1,5 @@
 # odoo:8.0-debain 10
-Custom Odoo 8.0 with debain 10 using docker
+Custom Odoo 8.0 installation with debain 10 and docker. 
 Before installing odoo there are two python packages which does not install in debain 10. we need to make dummy package for them. 
 - python-pypdf
 - python-imaging_1.13
@@ -30,4 +30,16 @@ pip install pyPdf
 
 - Above step will helps you to create fake package for python-pypdf. Please use same step for python-imaging_1.13 also.
 - now install odoo in debain buster
+
+# Steps using docker
+* Clone [odoo-8.0](https://github.com/gmanandhar/odoo-8.0.git)
+* Install Docker in your host
+* Run below commands
+```bash
+docker --version #Check docker verison and verify correctly installed
+docker build -t <image-name> . #Before using this command working directory should have Dockerfile
+docker images #Check image is installed or not
+docker run -p 8069:8069 --name <container-name> <image-name>
+```
+**Note:** I am using external database and skipping fake package installation. You can directly copy the packages and run from dpkg
 
