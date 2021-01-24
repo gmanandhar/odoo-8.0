@@ -1,5 +1,5 @@
 FROM debian:buster
-MAINTAINER gmanandhar <gaurab.manandhar@dincel.com.au>
+MAINTAINER gmanandhar <gaurabmdr@gmail.com>
 
 # Install some deps, lessc and less-plugin-clean-css, and wkhtmltopdf
 RUN set -x; \
