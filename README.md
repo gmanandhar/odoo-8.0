@@ -17,9 +17,9 @@ Before installing odoo there are two python packages which does not install in d
 >  .
 >  python-pypdf2  does not provide python-pypdf
 
->> run equivs-build python-pypdf # will create the fake package python-pypdf_1.13_all.deb
->> dpkg -i python-pypdf_1.13_all.deb # install the package 
->> pip install pyPdf 
+> run equivs-build python-pypdf # will create the fake package python-pypdf_1.13_all.deb
+> dpkg -i python-pypdf_1.13_all.deb # install the package 
+> pip install pyPdf 
 
 # Above step will helps you to create fake package for python-pypdf. Please use same step for python-imaging_1.13 also.
 # now install odoo in debain buster
