@@ -13,6 +13,7 @@ RUN set -x; \
             python-pyinotify \
             python-renderpm \
             python-pip \
+	    nano \
 	&& curl -o wkhtmltox.deb -SL https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.buster_amd64.deb \
         && dpkg --force-depends -i wkhtmltox.deb \
         && apt-get -y install -f --no-install-recommends \
