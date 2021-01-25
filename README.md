@@ -37,9 +37,10 @@ pip install pyPdf
 * Run below commands
 ```bash
 docker --version #Check docker verison and verify correctly installed
+docker run -d -e POSTGRES_USER=odoo -e POSTGRES_PASSWORD=odoo -e POSTGRES_DB=postgres --name db postgres:10 # Install postgres database in another container
 docker build -t <image-name> . #Before using this command working directory should have Dockerfile
 docker images #Check image is installed or not
-docker run -p 8069:8069 --name <container-name> <image-name>
+docker run -p 8069:8069 --name <container-name> --link db:db -t <container-name>
 ```
 **Note:** I am using external database and skipping fake package installation. You can directly copy the packages and run from dpkg
 
