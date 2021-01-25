@@ -40,7 +40,9 @@ RUN set -x; \
 
 # Copy entrypoint script, Odoo configuration file and dincel custom model
 COPY ./entrypoint.sh /
+COPY ./requirements.txt /
 
+RUN pip install -r requirements.txt
 RUN chown odoo /etc/odoo/openerp-server.conf
 
 # Mount /var/lib/odoo to allow restoring filestore and /mnt/extra-addons for users addons
